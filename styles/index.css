@@ -21,6 +21,7 @@ body{
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: var(--primary-font);
+    overflow-x: hidden;
 }
 
 /* ---------------Navbar_Start------------------ */
@@ -144,7 +145,7 @@ header img{
 }
 
 .hero-section .hero-image img{
-    width: 1466px;
+    width: 1510px;
     height: auto;
     z-index: -1;
     overflow: hidden;
@@ -363,14 +364,14 @@ header img{
     Justify-content: center;
     Align-items: flex-end;
     Height: 50px;
-    width: 1466px;
+    width: 100%;
     z-index: -1;
 }
 
 
 
 .minecraft-divider .block-group {
-    Width: 100px;
+    Width: 102px;
     Background-color: var(--primary-color);
 }
 
@@ -394,7 +395,7 @@ header img{
 
 .about-section {
     position: absolute;
-    top: 920px; /* Adjust this value based on the height of your hero section */
+    top: 940px; /* Adjust this value based on the height of your hero section */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -464,14 +465,14 @@ header img{
     position: absolute;
     top: 1800px;
     Height: 50px;
-    width: 1466px;
+    width: 100%;
     z-index: -1;
 }
 
 
 
 .minecraft-divider-2 .block-group {
-    Width: 100px;
+    Width: 102px;
     Background-color: var(--secondary-color);
 }
 
@@ -589,14 +590,14 @@ header img{
     position: absolute;
     top: 2650px;
     Height: 50px;
-    width: 1466px;
+    width: 100%;
     z-index: 1;
 }
 
 
 
 .minecraft-divider-3 .block-group {
-    Width: 100px;
+    Width: 102px;
     Background-color: var(--primary-color);
 }
 
@@ -722,7 +723,7 @@ header img{
 
 /* ---------------Shop_Section_End------------------ */
 
-/*----------------pixelated_divider_3_start------------------*/
+/*----------------pixelated_divider_4_start------------------*/
 .minecraft-divider-4{
     Display: flex;
     Align-items: flex-end;
@@ -730,12 +731,12 @@ header img{
     position: absolute;
     top: 3450px;
     Height: 50px;
-    width: 1466px;
+    width: 100%;
     z-index: 1;
 }
 
 .minecraft-divider-4 .block-group {
-    Width: 100px;
+    Width: 102px;
     Background-color: var(--secondary-color);
 }
 
@@ -775,5 +776,4 @@ footer img{
 footer img:hover{
     transform: scale(1.2);
     transition: ease-in-out 0.1s;
-
 }
