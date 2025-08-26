@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --primary-color: #212121;
+    --secondary-color: #2e2e2e;
+    --accent-color: ;
+    --text-color: #f4f3ee;
+    --primary-font: 'Inter', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body{
+    font-family: var(--primary-font);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--primary-font);
+}
+
+/* ---------------Navbar_Start------------------ */
+
+header{
+    backdrop-filter: blur(90px);
+    background: rgba(33, 33, 33, 0.086);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* ----------------------------- */
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 15px;
+    z-index: 1000;
+    /* ----------------------------- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ----------------------------- */
+    width: 80%;
+    height: 60px;
+    margin: 15px auto;
+    border-radius: 50px;
+    padding: 0 25px 0 20px;
+    /* ----------------------------- */
+}
+header img{
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+.right, .left, .middle{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.navbar .right{
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .left{
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.left .nav-logo, .left .nav-title{
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.navbar .nav-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.navbar .middle{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle div{
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.middle div:hover{
+    transform: scale(1.05);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+    text-decoration-thickness: 2px;
+    transition: transform ease-in-out 0.1s;
+}
+
+.middle div:active{
+    transform: scale(0.95);
+
+}
+
+.middle .links .vote-ico{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+
+.navbar .discord-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.navbar .discord-icon:hover{
+    transform: scale(1.2);
+    transition: ease-in-out 0.1s;
+}
+
+.navbar .discord-icon:active{
+    transform: scale(1);
+}
+
+/* ---------------Navbar_End------------------ */
+
+/* ---------------Hero_Section_Start------------------ */
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section .hero-image img{
+    width: 1466px;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hero-section .hero-title{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero-section .hero-title h1{
+    font-size: 70px;
+    font-weight: 900;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+    pointer-events: none;
+
+}
+
+.hero-section .hero-tagline{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-section .hero-tagline p{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+    pointer-events: none;
+}
+
+.hero-section .button {
+    --border-radius: 10px;
+    --border-width: 5px;
+    appearance: none;
+    position: absolute;
+    border-radius: 15px;
+    padding: 1em 3.5em;
+    border: 0;
+    background-color: #212121;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+}
+
+.hero-section .button:hover{
+    transform: scale(1.05);
+}
+
+.hero-section .button::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+        #488cfb,
+        #30ffdc,
+        #ddf505,
+        #ff9900,
+        #ff48d1,
+        #7468ff,
+        #488cfb
+    );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 3s infinite;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.hero-section .button:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+.hero-section .button,
+.hero-section .button::after {
+    box-sizing: border-box;
+}
+
+.hero-section .button:active {
+    --border-width: 5px;
+}
+
+.scrolldown {
+    --color: white;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: absolute;
+    top: 85%;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--primary-color);
+    box-shadow: 0px 0px 10px 0px hsl(177, 99%, 49%);
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(90px);
+}
+
+.scrolldown::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+    0% {
+        opacity: 0;
+        height: 6px;
+    }
+
+    40% {
+        opacity: 1;
+        height: 10px;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        height: 10px;
+        opacity: 0;
+    }
+
+    100% {
+        height: 3px;
+        opacity: 0;
+    }
+}
+
+.chevrons {
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    margin-top: 48px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chevrondown {
+    margin-top: -6px;
+    position: relative;
+    border: solid var(--primary-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+    animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+    animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+/* ---------------Hero_Section_End------------------ */
+
+/* ---------------Pixelated_Divider_Start------------------ */
+.minecraft-divider {
+    Display: flex;
+    Justify-content: center;
+    Align-items: flex-end;
+    Height: 50px;
+    width: 1466px;
+    z-index: -1;
+}
+
+
+
+.minecraft-divider .block-group {
+    Width: 100px;
+    Background-color: var(--primary-color);
+}
+
+.block-group-1 {
+    Height: 100px;
+}
+
+
+
+.block-group-2 {
+    Height: 150px;
+}
+
+.block-group-3 {
+    Height: 200px;
+}
+
+/* ---------------Pixelated_Divider_End------------------ */
+
+/* ---------------About_Section_Start------------------ */
+
+.about-section {
+    position: absolute;
+    top: 920px; /* Adjust this value based on the height of your hero section */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1300px; /* Max width for larger screens */
+    text-align: center;
+    margin: 0 auto; /* Center the section */
+    padding: 40px 20px;
+    z-index: 1; /* Padding for spacing */
+}
+
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px; /* Space between title and content */
+}
+
+.section-title h2 {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 20px; /* Common styling for titles */
+}
+
+.line {
+    height: 2px;
+    background-color: #a9a9a9;
+    flex-grow: 1; /* Allows lines to fill available space */
+    width: 120%;
+    max-width: 1000px; /* Optional: limits line width */
+}
+
+.about-content {
+    display: flex; /* Stack items vertically on small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 180px; /* Space between image and text */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 550px; /* Limit image size */
+    height: auto;
+    border-radius: 15px; /* Optional: rounded corners */
+}
+
+.about-content .about-text p{
+    margin-top: 30px;
+    width: 500px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: justify; /* Align text to the left for better readability */
+}
+
+.about-content .about-text h4{
+    font-weight: 800;
+    font-size: 24px;
+}
+
+/* ---------------Pixelated_Divider_2_Start------------------ */
+.minecraft-divider-2{
+    Display: flex;
+    Align-items: flex-end;
+    Justify-content: center;
+    position: absolute;
+    top: 1800px;
+    Height: 50px;
+    width: 1466px;
+    z-index: -1;
+}
+
+
+
+.minecraft-divider-2 .block-group {
+    Width: 100px;
+    Background-color: var(--secondary-color);
+}
+
+/* ---------------Pixelated_Divider_2_End------------------ */
+
+/* ---------------Features_Section_Start------------------ */
+.features-section {
+    position: absolute;
+    top: 1780px; /* Adjust this value based on the height of your about section */
+    width: 100%;
+    height: 822px;
+    text-align: center;
+    margin: 0 auto; /* Center the section */
+    padding: 40px 20px;
+    z-index: 1; /* Padding for spacing */
+    background-color: var(--secondary-color);
+}
+
+.features-section .section-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.features-content{
+    display: flex;
+    justify-content: center; /* Stack items vertically on small screens */
+    align-items: center;
+    flex-direction: column;
+    gap: 100px; /* Space between image and text */
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* From Uiverse.io by Samucraft346 */ 
+.card-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.r1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.r2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-36.2%);
+    top: 225px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.card {
+    width: 254px;
+    height: 190px;
+    background-image: linear-gradient(163deg, #6c6c6c 0%, #242424 100%);
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    box-shadow: 0 0 20px rgba(0, 255, 117, 0.6), 0 0 30px rgba(55, 0, 255, 0.6);
+}
+
+.card2 {
+    width: 244px;
+    height: 180px;
+    background-color: #1a1a1a;
+    transition: all 0.2s;
+    border-radius: 20px;
+}
+
+.card-icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.card2 p{
+    padding: 7px;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------------Pixelated_Divider_2_Start------------------ */
+.minecraft-divider-3{
+    Display: flex;
+    Align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 2650px;
+    Height: 50px;
+    width: 1466px;
+    z-index: 1;
+}
+
+
+
+.minecraft-divider-3 .block-group {
+    Width: 100px;
+    Background-color: var(--primary-color);
+}
+
+/* ---------------Pixelated_Divider_2_End------------------ */
+
+/* ---------------Shop_Section_Start------------------ */
+.shop-section {
+    position: absolute;
+    top: 2630px; /* Adjust this value based on the height of your features section */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1300px; /* Max width for larger screens */
+    text-align: center;
+    margin: 0 auto; /* Center the section */
+    padding: 40px 20px;
+    z-index: 1; /* Padding for spacing */
+}
+
+.shop-content {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px; /* Space between image and text */
+}
+
+.shop-content .shop-text{
+    margin-top: 10px;
+    width: 650px;
+    color: white;
+    line-height: 1.9; /* Align text to the left for better readability */
+}
+
+.shop-text h4{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.shop-cards{
+    display: flex;
+    justify-content: center; /* Stack items vertically on small screens */
+    align-items: center;
+    gap: 50px; /* Space between image and text */
+}
+
+.scard{
+    width: 354px;
+    height: 354px;
+    background-image: linear-gradient(163deg, #6c6c6c 0%, #242424 100%);
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scard:hover {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+}
+
+.scard2{
+    width: 344px;
+    height: 344px;
+    background-color: #1a1a1a;
+    transition: all 0.2s;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.scard2:hover{
+    backdrop-filter: blur(5px);
+}
+
+.scard-icon{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+    opacity: 0.5;
+}
+
+.shop-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+
+    padding: 0 10px;  
+    border-radius: 10px;
+    border: none;
+    background-color: #212121;
+    box-shadow: 0 0 5px #6c6c6c, 0 0 10px #242424;
+    width: 160px;
+    height: 40px;
+    gap: 10px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.shop-btn:hover{
+    transform: scale(1.05);
+    opacity: 1;
+    transition: all 0.1s;
+}
+
+.shop-btn img {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* ---------------Shop_Section_End------------------ */
+
+/*----------------pixelated_divider_3_start------------------*/
+.minecraft-divider-4{
+    Display: flex;
+    Align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 3450px;
+    Height: 50px;
+    width: 1466px;
+    z-index: 1;
+}
+
+.minecraft-divider-4 .block-group {
+    Width: 100px;
+    Background-color: var(--secondary-color);
+}
+
+.sblock-group-1 {
+    Height: 80px;
+}
+
+.sblock-group-2 {
+    Height: 130px;
+}
+
+.sblock-group-3 {
+    Height: 180px;
+}
+/*----------------pixelated_divider_3_end------------------*/
+
+/* ---------------Footer_Section_Start------------------ */
+footer{
+
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 3440px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+}
+
+footer img{
+    height: 40px;
+    cursor: pointer;
+}
+
+footer img:hover{
+    transform: scale(1.2);
+    transition: ease-in-out 0.1s;
+
+}
